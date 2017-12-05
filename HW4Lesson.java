@@ -3,7 +3,7 @@
  * 
  * @ author Sergey Zhurov
  * @ vertion dated Dec 5 2017
- * 
+ * @ GitHub link https://github.com/SergeyZhurov/Java-1-Homeworks.git
  */
  
  import java.util.*;
