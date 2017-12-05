@@ -13,7 +13,7 @@
     final char DOT_X = 'x';
     final char DOT_Y = 'y';
     final char DOT_EMPTY = '.';
-    final int MAP_SIZE = 10;                                             // You can change size of the map
+    final int MAP_SIZE = 5;                                             // You can change size of the map
     final int WIN_ROW = 4;                                              // and the number of x/y in a row to win the game
     char[][] map = new char[MAP_SIZE][MAP_SIZE];
     Scanner sc = new Scanner(System.in);
