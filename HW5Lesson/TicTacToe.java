@@ -1,8 +1,8 @@
 /**
- * Java 1. Lesson 3. Homework
+ * Java 1. Lesson 5. Homework task 6
  * 
  * @ author Sergey Zhurov
- * @ vertion dated Dec 5 2017
+ * @ vertion dated Dec 8 2017
  * @ GitHub link https://github.com/SergeyZhurov/Java-1-Homeworks.git
  */
 
