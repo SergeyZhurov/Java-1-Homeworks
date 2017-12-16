@@ -65,7 +65,7 @@ class HW7Lesson {
                     + " is " + ((cat[i].getFull())? "full." : "hungry."));
     }
 }
-// Window class
+
 class Window extends JFrame {
     public Window() {
         setTitle("Feeding cats.");
@@ -139,6 +139,7 @@ class Cat {
         return name;
     }
 
+    @Override
     public String toString() {
         return name + "(appetite: " + appetite + ")"
                 + " is " + ((full)? "full." : "hungry.");
