@@ -1,8 +1,10 @@
 /**
  * Java 1. Lesson 6. Homework
+ * Graphics interface isnt fully realised =(. All results are going to console
  *
- * @author Sergey Zhurov
- * @version dated Dec 16, 2017
+ * @ author Sergey Zhurov
+ * @ version dated Dec 16, 2017
+ * @ GitHub link https://github.com/SergeyZhurov/Java-1-Homeworks.git
  */
 
 import java.awt.event.*;
