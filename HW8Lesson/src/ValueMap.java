@@ -9,13 +9,11 @@
 import java.util.Arrays;
 
 public class ValueMap extends Map{
-    private final char DOT_X, DOT_Y;
-    private int[][] valueMap;                                      // Array for evaluating every possible AI move to block player
+    private int[][] valueMap;   // Array for evaluating every possible AI move to block player
 
-    ValueMap (final char DOT_X, final char DOT_Y, final char DOT_EMPTY, final int MAP_SIZE, final int WIN_ROW) {
-        super(MAP_SIZE, WIN_ROW, DOT_EMPTY);
-        this.DOT_X = DOT_X;
-        this.DOT_Y = DOT_Y;
+    ValueMap (final char DOT_X, final char DOT_Y, final char DOT_EMPTY, final int MAP_SIZE,
+              final int WIN_ROW, final int CELL_SIZE) {
+        super(DOT_X, DOT_Y, MAP_SIZE, WIN_ROW, DOT_EMPTY, CELL_SIZE);
         this.valueMap = new int[MAP_SIZE][MAP_SIZE];
     }
 
