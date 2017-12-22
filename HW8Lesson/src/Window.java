@@ -30,9 +30,9 @@ public class Window extends JFrame {
     final String[] winRowItems = {"3", "4", "5", "6", "7", "8", "9", "10"};  // Array for comboBoxWinRow
     JComboBox comboBoxMapSize = new JComboBox(mapSizeItems);
     JComboBox comboBoxWinRow = new JComboBox(winRowItems);
-    boolean gameActive = false;
+    boolean gameActive = false;                                              // for stopping the game at the end
 
-    Panel panel = new Panel();
+    Panel panel = new Panel();                                               // Game panel
     Human human = new Human(DOT_X);
     Ai ai = new Ai(mapSize, winRow, DOT_Y);
     Map map = new Map(DOT_X, DOT_Y, mapSize, winRow, DOT_EMPTY, CELL_SIZE);
@@ -91,17 +91,7 @@ public class Window extends JFrame {
                 String s2 = (String)comboBoxWinRow.getSelectedItem();
                 int a = Integer.parseInt(s1);
                 int b = Integer.parseInt(s2);
-                if (a >= b) {
-                    map.setSize(a);
-                    map.setWinRow(b);
-                    valueMap.setSize(a);
-                    valueMap.setWinRow(b);
-                    ai.setSize(a);
-                    ai.setWinRow(b);
-                    panel.repaint();
-                    setTitle("TicTacToe game. Map size: " + a + ". Win row: " + b);
-                    gameActive = true;
-                } else setTitle("Please select map size greater or equal to win row.");
+                tryInitNewMap(a, b);
             }
         });
         JButton btnExit = new JButton(BTN_EXIT);
@@ -114,8 +104,6 @@ public class Window extends JFrame {
 
         JLabel labelMapSize = new JLabel("Map size: ");
         JLabel labelWinRow = new JLabel("Win row: ");
-
-
 
         JPanel panelNorthEast = new JPanel();
         panelNorthEast.setLayout(new GridLayout());
@@ -145,5 +133,19 @@ public class Window extends JFrame {
             super.paint(g);
             map.paint(g);
         }
+    }
+
+    void tryInitNewMap(int a, int b) {                          // Initializes new game with new parameters if possible
+        if (a >= b) {
+            map.setSize(a);
+            map.setWinRow(b);
+            valueMap.setSize(a);
+            valueMap.setWinRow(b);
+            ai.setSize(a);
+            ai.setWinRow(b);
+            panel.repaint();
+            setTitle("TicTacToe game. Map size: " + a + ". Win row: " + b);
+            gameActive = true;
+        } else setTitle("Please select map size greater or equal to win row.");
     }
 }
