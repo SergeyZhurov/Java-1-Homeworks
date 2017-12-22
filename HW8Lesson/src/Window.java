@@ -26,6 +26,8 @@ public class Window extends JFrame {
     final String BTN_NEW_GAME = "New game";
     final String BTN_EXIT = "Exit";
     final String TITLE = "Tic Tac Toe game. Map size: " + MAP_SIZE;
+    final String[] mapSizeItems = {"3", "4", "5", "6", "7", "8", "9", "10"};
+    final String[] winRowItems = {"3", "4", "5", "6", "7", "8", "9", "10"};
 
     Panel panel = new Panel();
     Human human = new Human(DOT_X);
@@ -86,9 +88,13 @@ public class Window extends JFrame {
                 System.exit(0);
             }
         });
+        JComboBox comboBoxMapSize = new JComboBox(mapSizeItems);
+        JComboBox comboBoxWinRow = new JComboBox(winRowItems);
 
         JPanel panelBtn = new JPanel();
         panelBtn.setLayout(new GridLayout());
+        panelBtn.add(comboBoxMapSize);
+        panelBtn.add(comboBoxWinRow);
         panelBtn.add(init);
         panelBtn.add(exit);
 
