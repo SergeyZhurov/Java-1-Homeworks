@@ -44,11 +44,11 @@ public class Ai extends Player{
             }
         return move;
     }
-    void setSize(int x) {
+    void setSize(int x) {                                               //Setting size for new game
         mapSize = x;
     }
 
-    void setWinRow(int x) {
+    void setWinRow(int x) {                                             //Setting size for new game
         winRow = x;
     }
 }

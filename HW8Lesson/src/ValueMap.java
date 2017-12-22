@@ -105,11 +105,11 @@ and assings it to the same cell on the valueMap if the value on minimap is great
                 if ((i -x + j - y == winRow - 1) && (map[i][j] == DOT_EMPTY) && (rowValue[0] > valueMap[i][j])) valueMap[i][j] = rowValue[0];
     }
 
-    void setSize(int x) {
+    void setSize(int x) {               //Setting size for new game
         mapSize = x;
     }
 
-    void setWinRow(int x) {
+    void setWinRow(int x) {             //Setting size for new game
         winRow = x;
     }
 }

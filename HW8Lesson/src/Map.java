@@ -17,7 +17,7 @@ public class Map {
     protected char[][] map;
     private final Image IMAGE_X, IMAGE_Y, IMAGE_EMPTY;
 
-    Map(char DOT_X, char DOT_Y, int mapSize, int winRow, char DOT_EMPTY, int CELL_SIZE) {                // Fills gamemap with empty dots
+    Map(char DOT_X, char DOT_Y, int mapSize, int winRow, char DOT_EMPTY, int CELL_SIZE) {//Fills gamemap with empty dots
         this.DOT_X = DOT_X;
         this.DOT_Y = DOT_Y;
         this.mapSize = mapSize;
@@ -36,11 +36,11 @@ public class Map {
                 map[i][j] = DOT_EMPTY;
     }
 
-    void setSize(int x) {
+    void setSize(int x) {                                           //Setting size for new game
         mapSize = x;
     }
 
-    void setWinRow(int x) {
+    void setWinRow(int x) {                                         //Setting size for new game
         winRow = x;
     }
 

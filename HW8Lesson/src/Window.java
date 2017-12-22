@@ -13,21 +13,21 @@ import java.util.Collection;
 
 public class Window extends JFrame {
 
-    final char DOT_X = 'x';                                         // This is players dot
+    final char DOT_X = 'x';                                                  // This is players dot
     final Image DOT_X_IMAGE = new ImageIcon("X.png").getImage();
     final Image DOT_Y_IMAGE = new ImageIcon("Y.png").getImage();
-    final char DOT_Y = 'o';                                         // This is AI dot
-    final char DOT_EMPTY = '.';                                     // Empty dot
-    static private int mapSize = 10;                                         // Sise of the map
-    static private int winRow = 5;                                          // Size of win line
+    final char DOT_Y = 'o';                                                  // This is AI dot
+    final char DOT_EMPTY = '.';                                              // Empty dot
+    static private int mapSize = 10;                           // Sise of the map (default value doesnt mean anything)
+    static private int winRow = 5;                             // Size of win line (default value doesnt mean anything)
     final int WINDOW_SIZE_X = 516;
     final int WINDOW_SIZE_Y = 565;
     final int CELL_SIZE = 50;
     final String BTN_NEW_GAME = "New game";
     final String BTN_EXIT = "Exit";
     private String title = "Welcome to the Tic Tac Toe game.";
-    final String[] mapSizeItems = {"3", "4", "5", "6", "7", "8", "9", "10"};
-    final String[] winRowItems = {"3", "4", "5", "6", "7", "8", "9", "10"};
+    final String[] mapSizeItems = {"3", "4", "5", "6", "7", "8", "9", "10"}; // Array for comboBoxMapSize
+    final String[] winRowItems = {"3", "4", "5", "6", "7", "8", "9", "10"};  // Array for comboBoxWinRow
     JComboBox comboBoxMapSize = new JComboBox(mapSizeItems);
     JComboBox comboBoxWinRow = new JComboBox(winRowItems);
     static private Window gameWindow;
