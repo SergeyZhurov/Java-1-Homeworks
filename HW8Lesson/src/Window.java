@@ -18,10 +18,10 @@ public class Window extends JFrame {
     final Image DOT_Y_IMAGE = new ImageIcon("Y.png").getImage();
     final char DOT_Y = 'o';                                         // This is AI dot
     final char DOT_EMPTY = '.';                                     // Empty dot
-    static private int MAP_SIZE = 10;                                         // Sise of the map
-    static private int WIN_ROW = 5;                                          // Size of win line
-    int WINDOW_SIZE_X = 516;
-    int WINDOW_SIZE_Y = 565;
+    static private int mapSize = 10;                                         // Sise of the map
+    static private int winRow = 5;                                          // Size of win line
+    final int WINDOW_SIZE_X = 516;
+    final int WINDOW_SIZE_Y = 565;
     final int CELL_SIZE = 50;
     final String BTN_NEW_GAME = "New game";
     final String BTN_EXIT = "Exit";
@@ -35,9 +35,9 @@ public class Window extends JFrame {
 
     Panel panel = new Panel();
     Human human = new Human(DOT_X);
-    Ai ai = new Ai(MAP_SIZE, WIN_ROW, DOT_Y);
-    Map map = new Map(DOT_X, DOT_Y, MAP_SIZE, WIN_ROW, DOT_EMPTY, CELL_SIZE);
-    ValueMap valueMap = new ValueMap(DOT_X, DOT_Y, DOT_EMPTY, MAP_SIZE, WIN_ROW, CELL_SIZE);
+    Ai ai = new Ai(mapSize, winRow, DOT_Y);
+    Map map = new Map(DOT_X, DOT_Y, mapSize, winRow, DOT_EMPTY, CELL_SIZE);
+    ValueMap valueMap = new ValueMap(DOT_X, DOT_Y, DOT_EMPTY, mapSize, winRow, CELL_SIZE);
 
     public static void main(String args[]) {
         gameWindow = new Window();
