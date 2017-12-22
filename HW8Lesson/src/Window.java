@@ -19,14 +19,13 @@ public class Window extends JFrame {
     final char DOT_Y = 'o';                                         // This is AI dot
     final char DOT_EMPTY = '.';                                     // Empty dot
     static private int MAP_SIZE = 10;                                         // Sise of the map
-    static private int WIN_ROW = 4;                                          // Size of win line
-    int WINDOW_SIZE = MAP_SIZE * 50;
-    final int WINDOW_DX = WINDOW_SIZE / 10;
-    final int WINDOW_DY = WINDOW_SIZE / 2;
-    final int CELL_SIZE = WINDOW_SIZE / MAP_SIZE;
+    static private int WIN_ROW = 5;                                          // Size of win line
+    int WINDOW_SIZE_X = 516;
+    int WINDOW_SIZE_Y = 565;
+    final int CELL_SIZE = 50;
     final String BTN_NEW_GAME = "New game";
     final String BTN_EXIT = "Exit";
-    private String TITLE = "Welcome to the Tic Tac Toe game.";
+    private String title = "Welcome to the Tic Tac Toe game.";
     final String[] mapSizeItems = {"3", "4", "5", "6", "7", "8", "9", "10"};
     final String[] winRowItems = {"3", "4", "5", "6", "7", "8", "9", "10"};
     JComboBox comboBoxMapSize = new JComboBox(mapSizeItems);
@@ -45,9 +44,9 @@ public class Window extends JFrame {
     }
 
     Window() {
-        setTitle(TITLE);
+        setTitle(title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(WINDOW_SIZE + WINDOW_DX, WINDOW_SIZE + WINDOW_DY);
+        setSize(WINDOW_SIZE_X, WINDOW_SIZE_Y);
         setLocationRelativeTo(null); // to the center
         setResizable(false);
 
@@ -127,14 +126,12 @@ public class Window extends JFrame {
         panelNorthEast.add(comboBoxWinRow);
 
         JPanel panelNorthWest = new JPanel();
-        panelNorthWest.setLayout(new BorderLayout());
+        panelNorthWest.setLayout(new GridLayout());
         panelNorthWest.add(btnNewGame);
         panelNorthWest.add(btnExit);
 
-
         JPanel panelNorth = new JPanel();
         panelNorth.setLayout(new GridLayout());
-
         panelNorth.add(panelNorthEast);
         panelNorth.add(panelNorthWest);
 
