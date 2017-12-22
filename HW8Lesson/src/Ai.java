@@ -9,7 +9,7 @@
 import java.util.Random;
 
 public class Ai extends Player{
-    private final int MAP_SIZE, WIN_ROW;
+    private int MAP_SIZE, WIN_ROW;
     private Random rand = new Random();
 
     Ai(final int MAP_SIZE, final int WIN_ROW, final char DOT) {
@@ -43,5 +43,12 @@ public class Ai extends Player{
                 }
             }
         return move;
+    }
+    void setSize(int x) {
+        MAP_SIZE = x;
+    }
+
+    void setWinRow(int x) {
+        WIN_ROW = x;
     }
 }

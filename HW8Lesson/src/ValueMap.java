@@ -104,4 +104,12 @@ and assings it to the same cell on the valueMap if the value on minimap is great
             for (int j = y; j < y + WIN_ROW; j++)
                 if ((i -x + j - y == WIN_ROW - 1) && (map[i][j] == DOT_EMPTY) && (rowValue[0] > valueMap[i][j])) valueMap[i][j] = rowValue[0];
     }
+
+    void setSize(int x) {
+        MAP_SIZE = x;
+    }
+
+    void setWinRow(int x) {
+        WIN_ROW = x;
+    }
 }

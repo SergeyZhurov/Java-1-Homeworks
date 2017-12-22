@@ -13,7 +13,7 @@ import java.awt.geom.Line2D;
 
 public class Map {
     protected final char DOT_EMPTY, DOT_X, DOT_Y;
-    protected final int MAP_SIZE, WIN_ROW, CELL_SIZE;
+    protected int MAP_SIZE, WIN_ROW, CELL_SIZE;
     protected char[][] map;
     private final Image IMAGE_X, IMAGE_Y, IMAGE_EMPTY;
 
@@ -34,6 +34,14 @@ public class Map {
         for (int i = 0; i < MAP_SIZE; i++)
             for (int j = 0; j < MAP_SIZE; j++)
                 map[i][j] = DOT_EMPTY;
+    }
+
+    void setSize(int x) {
+        MAP_SIZE = x;
+    }
+
+    void setWinRow(int x) {
+        WIN_ROW = x;
     }
 
     void paint(Graphics g) {                                        // Paints gamemap
