@@ -13,8 +13,6 @@ import java.awt.event.*;
 public class Window extends JFrame {
 
     final char DOT_X = 'x';                                                  // This is players dot
-    final Image DOT_X_IMAGE = new ImageIcon("X.png").getImage();
-    final Image DOT_Y_IMAGE = new ImageIcon("Y.png").getImage();
     final char DOT_Y = 'o';                                                  // This is AI dot
     final char DOT_EMPTY = '.';                                              // Empty dot
     final int WINDOW_SIZE_X = 516;
