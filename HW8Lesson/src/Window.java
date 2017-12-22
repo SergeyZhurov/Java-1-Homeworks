@@ -9,7 +9,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Collection;
 
 public class Window extends JFrame {
 
@@ -48,7 +47,7 @@ public class Window extends JFrame {
         setTitle(title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(WINDOW_SIZE_X, WINDOW_SIZE_Y);
-        setLocationRelativeTo(null); // to the center
+        setLocationRelativeTo(null);
         setResizable(false);
 
         panel.setBackground(Color.white);

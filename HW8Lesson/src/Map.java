@@ -8,8 +8,6 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
 
 public class Map {
     protected final char DOT_EMPTY, DOT_X, DOT_Y;
