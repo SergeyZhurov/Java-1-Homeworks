@@ -30,7 +30,6 @@ public class Window extends JFrame {
     final String[] winRowItems = {"3", "4", "5", "6", "7", "8", "9", "10"};  // Array for comboBoxWinRow
     JComboBox comboBoxMapSize = new JComboBox(mapSizeItems);
     JComboBox comboBoxWinRow = new JComboBox(winRowItems);
-    static private Window gameWindow;
     boolean gameActive = false;
 
     Panel panel = new Panel();
@@ -40,7 +39,7 @@ public class Window extends JFrame {
     ValueMap valueMap = new ValueMap(DOT_X, DOT_Y, DOT_EMPTY, mapSize, winRow, CELL_SIZE);
 
     public static void main(String args[]) {
-        gameWindow = new Window();
+        new Window();
     }
 
     Window() {
