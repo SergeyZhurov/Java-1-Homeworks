@@ -9,13 +9,13 @@
 public class Hw5 {
     static final int size = 10000000;
     static final int h = size / 2;
-    static volatile float[] arr = new float[size];
+    static float[] arr = new float[size];
 
     public static void main(String[] args) throws InterruptedException {
         setDefaultArr(arr);
 
         long a = System.currentTimeMillis();
-        calculation(arr);
+        calculations(arr);
         System.out.println(System.currentTimeMillis() - a);
 
         countInThreads();
@@ -30,11 +30,12 @@ public class Hw5 {
         long a = System.currentTimeMillis();
         System.arraycopy(arr, 0, a1, 0, h);
         System.arraycopy(arr, h, a2, 0, h);
-
-        Thread arr1Thread = new CountArr(a1, 0);
-        Thread arr2Thread = new CountArr(a1, h);
+        Thread arr1Thread = new CountArr(a1);
+        Thread arr2Thread = new CountArr(a2);
         arr1Thread.join();
         arr2Thread.join();
+        System.arraycopy(a1, 0, arr, 0, h);
+        System.arraycopy(a2, 0, arr, h, h);
         System.out.println(System.currentTimeMillis() - a);
     }
 
@@ -44,10 +45,9 @@ public class Hw5 {
         }
     }
 
-    public static synchronized void calculation(float[] arr) {
+    public static synchronized void calculations(float[] arr) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
     }
-
 }
